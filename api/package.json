@@ -5,7 +5,8 @@
     "main": "server.js",
     "scripts": {
         "start": "node server.js",
-        "test": "jest"
+        "test": "jest",
+        "lint": "eslint ."
     },
     "dependencies": {
         "cors": "^2.8.5",
@@ -25,6 +26,9 @@
         "glitch"
     ],
     "devDependencies": {
+        "@eslint/js": "^9.27.0",
+        "eslint": "^9.27.0",
+        "globals": "^16.1.0",
         "jest": "^29.7.0",
         "jest-junit": "^16.0.0"
     }

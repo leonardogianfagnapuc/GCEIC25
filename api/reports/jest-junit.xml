@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="1" failures="0" errors="0" time="0.555">
-  <testsuite name="Teste de cálculo de piscina" errors="0" failures="0" skipped="0" timestamp="2025-05-19T21:50:14" time="0.482" tests="1">
+<testsuites name="jest tests" tests="1" failures="0" errors="0" time="0.39">
+  <testsuite name="Teste de cálculo de piscina" errors="0" failures="0" skipped="0" timestamp="2025-05-19T22:01:09" time="0.316" tests="1">
     <testcase classname="Teste de cálculo de piscina Calcula corretamente os valores" name="Teste de cálculo de piscina Calcula corretamente os valores" time="0.003">
     </testcase>
   </testsuite>
