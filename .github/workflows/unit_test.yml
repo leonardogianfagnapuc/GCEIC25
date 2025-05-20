@@ -84,17 +84,15 @@ jobs:
 
       - name: Verifica se o arquivo de relatório existe
         run: |
-          echo "Listando arquivos gerados após testes:"
           find . -name "jest-junit.xml"
-          echo "Conteúdo do diretório reports:"
-          ls -la reports || echo "Diretório 'reports' não encontrado"
+
 
       - name: Gera o Relatório dos testes
         uses: dorny/test-reporter@v1
         if: success() || failure()
         with:
           name: JEST tests
-          path: reports/jest-junit.xml
+          path: api/reports/jest-junit.xml
           reporter: jest-junit
 
 
