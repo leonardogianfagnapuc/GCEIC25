@@ -87,8 +87,9 @@ jobs:
         if: success() || failure()
         with:
           name: JEST tests
-          path: api/j*.xml
+          path: reports/jest-junit.xml
           reporter: jest-junit
+
 
   Deploy:
     needs: test
