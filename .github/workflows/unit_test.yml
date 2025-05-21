@@ -70,7 +70,7 @@ jobs:
         uses: dorny/test-reporter@v1
         with:
           name: JEST tests
-          path: jest-junit.xml
+          path: relatorio-jest/jest-junit.xml
           reporter: jest-junit
           list-suites: all
           list-tests: all
