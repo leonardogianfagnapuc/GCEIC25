@@ -7,7 +7,9 @@
     </testcase>
     <testcase classname="Teste da rota POST /login Login com credenciais inválidas retorna 401" name="Teste da rota POST /login Login com credenciais inválidas retorna 401" time="0.004">
     </testcase>
-    <testcase classname="Teste da rota POST /sobre Retorna a URL da imagem corretamente" name="Teste da rota POST /sobre Retorna a URL da imagem corretamente" time="0.004">
+    <testcase classname="Teste da rota POST /sobre Retorna a URL da imagem corretamente" name="Teste da rota POST /sobre Retorna a URL da imagem corretamente" time="0.013">
+    </testcase>
+    <testcase classname="Teste da rota GET /ajuda Retorna o texto de ajuda corretamente" name="Teste da rota GET /ajuda Retorna o texto de ajuda corretamente" time="0.009">
     </testcase>
     <testcase classname="Teste da rota POST /MOB3/splash Retorna sucesso e mensagem da splash screen" name="Teste da rota POST /MOB3/splash Retorna sucesso e mensagem da splash screen" time="0.004">
     </testcase>

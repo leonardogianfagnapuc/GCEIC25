@@ -31,9 +31,19 @@ exports.sobre = (req, res) => {
   });
 };
 
+
 exports.splashScreen = (req, res) => {
   res.status(200).json({
     sucesso: true,
     mensagem: 'Splash screen carregada'
+  });
+};
+
+exports.ajuda = (req, res) => {
+  res.status(200).json({
+    titulo: 'Ajuda',
+    texto:
+      'Preencha os dados da piscina e toque em "Calcular" para ver o custo estimado.\n\n' +
+      'Caso tenha dúvidas, entre em contato com a equipe MOB3.',
   });
 };

@@ -129,22 +129,49 @@
             }
           }
         }
-      }
-    },
-    "/datetime": {
-      "get": {
-        "summary": "Retorna data e hora do servidor",
-        "responses": {
-          "200": {
-            "description": "Data e hora atual",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "datetime": {
-                      "type": "string",
-                      "format": "date-time"
+      },
+      "/MOB3/ajuda": {
+        "get": {
+          "summary": "Retorna informações da tela de ajuda",
+          "responses": {
+            "200": {
+              "description": "Texto de ajuda retornado com sucesso",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "titulo": {
+                        "type": "string",
+                        "example": "Ajuda"
+                      },
+                      "texto": {
+                        "type": "string",
+                        "example": "Preencha os dados da piscina e toque em 'Calcular' para ver o custo estimado.\n\nCaso tenha dúvidas, entre em contato com a equipe MOB3."
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/datetime": {
+        "get": {
+          "summary": "Retorna data e hora do servidor",
+          "responses": {
+            "200": {
+              "description": "Data e hora atual",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "datetime": {
+                        "type": "string",
+                        "format": "date-time"
+                      }
                     }
                   }
                 }

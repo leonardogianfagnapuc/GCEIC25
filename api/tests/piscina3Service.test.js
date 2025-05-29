@@ -78,3 +78,16 @@ describe('Teste da rota POST /MOB3/splash', () => {
     expect(response.body).toHaveProperty('mensagem', 'Splash screen carregada');
   });
 });
+
+// Verifica o Get da tela ajuda
+describe('Teste da rota GET /ajuda', () => {
+  test('Retorna o texto de ajuda corretamente', async () => {
+    const response = await request(app)
+      .get('/MOB3/ajuda')
+      .expect(200);
+
+    expect(response.body).toHaveProperty('titulo', 'Ajuda');
+    expect(response.body).toHaveProperty('texto');
+    expect(response.body.texto).toMatch(/Preencha os dados da piscina/);
+  });
+});
