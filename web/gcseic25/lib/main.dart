@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:gcseic25/equipes/APOS/screens/splash_screen.dart';
 import 'dart:async'; // Para o Timer
 import 'package:http/http.dart' as http;
 import 'package:gcseic25/equipes/base/base.dart';
@@ -9,6 +8,7 @@ import 'package:gcseic25/page/markup.dart';
 import 'package:gcseic25/page/login.dart';
 import 'package:flutter/rendering.dart';
 import 'package:gcseic25/equipes/APOS/screens/splash_screen.dart';
+import 'package:gcseic25/equipes/base/equipe3/login_screen.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized(); // required semantics binding
@@ -34,6 +34,7 @@ class MyApp extends StatelessWidget {
         '/splash2':
             (context) =>
                 SplashScreen(nextPage: ConsultaPage(title: 'Consulta 2')),
+        '/splash3': (context) => SplashScreen(nextPage: LoginScreen()), // splash antes do login
         '/markup': (context) => MultiplierMarkupPage(),
         '/login': (context) => LoginPage(),
         '/aposSplashScreen': (context) => APOSSplashScreen(),
@@ -109,6 +110,12 @@ class HomePage extends StatelessWidget {
                   child: const Text('Entrar'),
                 ),
               ),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/splash3');
+              },
+              child: Text('MOB3'),
             ),
           ],
         ),
