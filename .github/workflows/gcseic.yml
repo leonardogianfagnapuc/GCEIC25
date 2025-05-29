@@ -4,6 +4,7 @@ on:
   push:
     branches: 
       - 'main'
+      - merge-actions
     paths:
       - 'api/**'  
   
@@ -18,17 +19,7 @@ on:
           - dev
           - prod
           - stage
-jobs:
-  info:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Gera siada do Github context
-        run: echo "${{ toJSON(github) }}"
-      - name : Mostra mensagem
-        run: echo "Alo turma"
-      - name :  Lista diretorio
-        run: ls -la          
-
+jobs:       
   getCode:
     runs-on: ubuntu-latest
     steps:
@@ -62,6 +53,19 @@ jobs:
   #      run:
   #           npm run lint
       # aqui uma entrada para cada teste
+      - name: Roda os testes
+        run: npm test
+
+      - name: lista
+        run: ls -la
+
+      - name: Gera o Relatório de testes
+        uses: dorny/test-reporter@v1
+        if: success() || failure() # roda de qualquer maneira
+        with:
+          name: JEST tests
+          path: api/j*.xml
+          reporter: jest-junit
         
   Deploy:
     needs: test
