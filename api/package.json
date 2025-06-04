@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "funcional2": "node ./test/funcionalExemplo2",
+    "funcional2": "node ./test/funcionalExemplo2 && node ./test/funcionalPiscina3.js",
     "test": "jest --no-coverage --ci --reporters=default --testResultsProcessor=jest-junit",
     "testEquipe2": "jest --ci --reporters=default --reporters=jest-junit",
     "lint": "eslint ."
