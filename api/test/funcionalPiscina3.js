@@ -8,7 +8,7 @@ function ensureDirectoryExistence(filePath) {
   if (fs.existsSync(dirname)) return true;
   fs.mkdirSync(dirname, { recursive: true });
 }
-
+//
 const screenshotsDir = path.join(__dirname, '..', 'fotos', 'mob3');
 
 (async () => {
